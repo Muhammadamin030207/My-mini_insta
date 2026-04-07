@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <h1>⚠️ Postni o‘chirish</h1>
+    <p><strong>{{ post.title }}</strong></p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">🗑 Ha, o‘chir</button>
+        <a class="btn btn-secondary" href="{% url 'post_detail' post.pk %}">Bekor qilish</a>
+    </form>
+</div>
+
+{% endblock %}

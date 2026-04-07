@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <h1>📝 Post yaratish</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label>Title</label>
+        {{ form.title }}
+
+        <label>Body</label>
+        {{ form.body }}
+
+        <label>Image</label>
+        {{ form.image }}
+
+        <button class="btn btn-primary" type="submit">💾 Saqlash</button>
+        <a class="btn btn-secondary" href="{% url 'post_list' %}">Bekor qilish</a>
+    </form>
+</div>
+
+{% endblock %}
