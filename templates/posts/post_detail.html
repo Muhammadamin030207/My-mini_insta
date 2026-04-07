@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+
+    {% if post.image %}
+        <img src="{{ post.image.url }}">
+    {% endif %}
+
+    <br><br>
+
+    {% if request.user == post.author %}
+        <a class="btn btn-warning" href="{% url 'post_update' post.pk %}">✏️ Edit</a>
+        <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">🗑 Delete</a>
+    {% endif %}
+
+    <a class="btn btn-secondary" href="{% url 'post_list' %}">⬅ Orqaga</a>
+</div>
+
+{% endblock %}

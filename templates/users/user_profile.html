@@ -66,7 +66,7 @@
                         {% if request.user.is_authenticated %}
                             {% if request.user.id == user_obj.id %}
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-primary rounded-pill">Profilni tahrirlash</a>
+                                    <a href="{% url 'profile_edit' %}" class="btn btn-primary rounded-pill">Profilni tahrirlash</a>
                                     
                                     <form action="{% url 'logout' %}" method="post">
                                         {% csrf_token %}
