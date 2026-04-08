@@ -22,7 +22,7 @@ class CustomUserChangeForm(UserChangeForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'body', 'image']
+        fields = ['title', 'body', 'image', 'video']
 
 class UserUpdateForm(forms.ModelForm):
     class Meta:

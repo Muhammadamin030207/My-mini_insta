@@ -14,6 +14,13 @@
                 <img src="{{ post.image.url }}" 
                      class="card-img-top" 
                      style="height: 200px; object-fit: cover;">
+                     <br>
+                     <br>
+            {% elif post.video %}
+                <video controls class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <source src="{{ post.video.url }}" type="video/mp4">
+                    Sizning brauzeringiz video tegini qo'llab-quvvatlamaydi.
+                </video>
             {% endif %}
 
             <div class="card-body">

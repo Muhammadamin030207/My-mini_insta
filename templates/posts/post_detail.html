@@ -9,6 +9,13 @@
     {% if post.image %}
         <img src="{{ post.image.url }}">
     {% endif %}
+    <br><br><br>
+    {% if post.video %}
+        <video controls>
+            <source src="{{ post.video.url }}" type="video/mp4">
+            Sizning brauzeringiz video tegini qo'llab-quvvatlamaydi.
+        </video>
+    {% endif %}
 
     <br><br>
 
